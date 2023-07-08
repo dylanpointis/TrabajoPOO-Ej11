@@ -43,6 +43,7 @@ namespace TP_EJERCICIO_11.Formularios
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRealizarReclamo = new System.Windows.Forms.Button();
+            this.btnEliminarMovil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaReclamos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDPedido)).BeginInit();
             this.SuspendLayout();
@@ -162,12 +163,25 @@ namespace TP_EJERCICIO_11.Formularios
             this.btnRealizarReclamo.UseVisualStyleBackColor = false;
             this.btnRealizarReclamo.Click += new System.EventHandler(this.btnRealizarReclamo_Click);
             // 
+            // btnEliminarMovil
+            // 
+            this.btnEliminarMovil.BackColor = System.Drawing.Color.Firebrick;
+            this.btnEliminarMovil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarMovil.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarMovil.Location = new System.Drawing.Point(137, 308);
+            this.btnEliminarMovil.Name = "btnEliminarMovil";
+            this.btnEliminarMovil.Size = new System.Drawing.Size(121, 26);
+            this.btnEliminarMovil.TabIndex = 116;
+            this.btnEliminarMovil.Text = "Eliminar Reclamo";
+            this.btnEliminarMovil.UseVisualStyleBackColor = false;
+            // 
             // Form_ReclamosClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 749);
             this.ControlBox = false;
+            this.Controls.Add(this.btnEliminarMovil);
             this.Controls.Add(this.btnRealizarReclamo);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label4);
@@ -202,5 +216,6 @@ namespace TP_EJERCICIO_11.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button btnEliminarMovil;
     }
 }

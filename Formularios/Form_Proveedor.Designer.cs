@@ -88,7 +88,7 @@
             this.btnEliminarMovil.BackColor = System.Drawing.Color.Firebrick;
             this.btnEliminarMovil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarMovil.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarMovil.Location = new System.Drawing.Point(58, 694);
+            this.btnEliminarMovil.Location = new System.Drawing.Point(58, 676);
             this.btnEliminarMovil.Name = "btnEliminarMovil";
             this.btnEliminarMovil.Size = new System.Drawing.Size(121, 26);
             this.btnEliminarMovil.TabIndex = 97;
@@ -101,7 +101,7 @@
             this.btnEditarMovil.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnEditarMovil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarMovil.ForeColor = System.Drawing.Color.White;
-            this.btnEditarMovil.Location = new System.Drawing.Point(58, 657);
+            this.btnEditarMovil.Location = new System.Drawing.Point(58, 639);
             this.btnEditarMovil.Name = "btnEditarMovil";
             this.btnEditarMovil.Size = new System.Drawing.Size(121, 26);
             this.btnEditarMovil.TabIndex = 96;
@@ -113,7 +113,7 @@
             this.btnRegistrarMovil.BackColor = System.Drawing.Color.ForestGreen;
             this.btnRegistrarMovil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarMovil.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarMovil.Location = new System.Drawing.Point(58, 621);
+            this.btnRegistrarMovil.Location = new System.Drawing.Point(58, 603);
             this.btnRegistrarMovil.Name = "btnRegistrarMovil";
             this.btnRegistrarMovil.Size = new System.Drawing.Size(121, 26);
             this.btnRegistrarMovil.TabIndex = 95;
@@ -125,7 +125,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(208, 471);
+            this.label13.Location = new System.Drawing.Point(208, 453);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(115, 20);
             this.label13.TabIndex = 94;
@@ -137,9 +137,9 @@
             this.grillaMoviles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.grillaMoviles.Location = new System.Drawing.Point(211, 500);
+            this.grillaMoviles.Location = new System.Drawing.Point(211, 482);
             this.grillaMoviles.Name = "grillaMoviles";
-            this.grillaMoviles.Size = new System.Drawing.Size(288, 321);
+            this.grillaMoviles.Size = new System.Drawing.Size(288, 278);
             this.grillaMoviles.TabIndex = 93;
             // 
             // dataGridViewTextBoxColumn1
@@ -216,7 +216,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(659, 471);
+            this.label7.Location = new System.Drawing.Point(659, 453);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 20);
             this.label7.TabIndex = 83;
@@ -248,9 +248,9 @@
             this.Nombre,
             this.Column1,
             this.Mail});
-            this.grillaClientes.Location = new System.Drawing.Point(663, 494);
+            this.grillaClientes.Location = new System.Drawing.Point(663, 482);
             this.grillaClientes.Name = "grillaClientes";
-            this.grillaClientes.Size = new System.Drawing.Size(490, 321);
+            this.grillaClientes.Size = new System.Drawing.Size(490, 278);
             this.grillaClientes.TabIndex = 74;
             // 
             // Column2
@@ -291,7 +291,7 @@
             this.Estado});
             this.grillaEnvios.Location = new System.Drawing.Point(211, 42);
             this.grillaEnvios.Name = "grillaEnvios";
-            this.grillaEnvios.Size = new System.Drawing.Size(942, 400);
+            this.grillaEnvios.Size = new System.Drawing.Size(1015, 400);
             this.grillaEnvios.TabIndex = 73;
             // 
             // Column3
@@ -393,7 +393,7 @@
             // 
             // txtNombreMovil
             // 
-            this.txtNombreMovil.Location = new System.Drawing.Point(59, 525);
+            this.txtNombreMovil.Location = new System.Drawing.Point(59, 507);
             this.txtNombreMovil.Name = "txtNombreMovil";
             this.txtNombreMovil.Size = new System.Drawing.Size(121, 20);
             this.txtNombreMovil.TabIndex = 101;
@@ -401,7 +401,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 500);
+            this.label8.Location = new System.Drawing.Point(56, 482);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 102;
@@ -410,7 +410,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(56, 558);
+            this.label12.Location = new System.Drawing.Point(56, 540);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(100, 13);
             this.label12.TabIndex = 104;
@@ -418,7 +418,7 @@
             // 
             // txtNumeroMovil
             // 
-            this.txtNumeroMovil.Location = new System.Drawing.Point(59, 578);
+            this.txtNumeroMovil.Location = new System.Drawing.Point(59, 560);
             this.txtNumeroMovil.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -471,7 +471,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1199, 772);
+            this.ClientSize = new System.Drawing.Size(1296, 772);
             this.ControlBox = false;
             this.Controls.Add(this.txtMovil);
             this.Controls.Add(this.txtCliente);

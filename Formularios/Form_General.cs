@@ -40,6 +40,7 @@ namespace TP_EJERCICIO_11
 
         private void Form_General_Load(object sender, EventArgs e)
         {
+            lblBienvenido.Text = $"Bienvenido {Rol.ToUpper()}: {Nombre} {Apellido}";
             if (Rol == "Operador")
             {
                 Form_Operadores formulario = new Form_Operadores();
@@ -58,6 +59,7 @@ namespace TP_EJERCICIO_11
             {
                 FormActual.Close();
             }
+            lblBienvenido.Visible = false;
             FormActual = unFormulario;
             FormActual.MdiParent = this;
             FormActual.Dock = DockStyle.Fill;
@@ -78,15 +80,9 @@ namespace TP_EJERCICIO_11
                 Form_Clientes formulario = new Form_Clientes(unCliente);
                 MostrarFormulario(formulario);
             }
-
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnCuentas_Click(object sender, EventArgs e)
+        private void btnCuentas_Click_1(object sender, EventArgs e)
         {
             Form_Admin formulario = new Form_Admin();
             formulario.MdiParent = this;
@@ -95,12 +91,14 @@ namespace TP_EJERCICIO_11
 
         private void btnReclamos_Click(object sender, EventArgs e)
         {
-            if (Rol == "Cliente")
-            {
-                Cliente unCliente = new Cliente(nombreUsuario, Nombre, Apellido, Mail);
-                Form_ReclamosClientes formulario = new Form_ReclamosClientes(unCliente);
-                MostrarFormulario(formulario);
-            }
+            Usuario unUsuario = new Usuario(nombreUsuario, "", Nombre, Apellido, Mail, Rol);
+            Form_ReclamosClientes formulario = new Form_ReclamosClientes(unUsuario);
+            MostrarFormulario(formulario);
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
