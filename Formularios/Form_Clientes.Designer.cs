@@ -71,7 +71,7 @@ namespace TP_EJERCICIO_11
             // 
             this.labelEnvios.AutoSize = true;
             this.labelEnvios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnvios.Location = new System.Drawing.Point(21, 157);
+            this.labelEnvios.Location = new System.Drawing.Point(77, 158);
             this.labelEnvios.Name = "labelEnvios";
             this.labelEnvios.Size = new System.Drawing.Size(109, 20);
             this.labelEnvios.TabIndex = 86;
@@ -91,9 +91,9 @@ namespace TP_EJERCICIO_11
             this.Movil,
             this.FechaEntrega,
             this.Estado});
-            this.grillaEnvios.Location = new System.Drawing.Point(12, 191);
+            this.grillaEnvios.Location = new System.Drawing.Point(68, 192);
             this.grillaEnvios.Name = "grillaEnvios";
-            this.grillaEnvios.Size = new System.Drawing.Size(1016, 375);
+            this.grillaEnvios.Size = new System.Drawing.Size(1119, 375);
             this.grillaEnvios.TabIndex = 85;
             // 
             // btnBajaPedido
@@ -101,7 +101,7 @@ namespace TP_EJERCICIO_11
             this.btnBajaPedido.BackColor = System.Drawing.Color.Firebrick;
             this.btnBajaPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBajaPedido.ForeColor = System.Drawing.Color.White;
-            this.btnBajaPedido.Location = new System.Drawing.Point(12, 597);
+            this.btnBajaPedido.Location = new System.Drawing.Point(68, 598);
             this.btnBajaPedido.Name = "btnBajaPedido";
             this.btnBajaPedido.Size = new System.Drawing.Size(121, 26);
             this.btnBajaPedido.TabIndex = 98;
@@ -122,8 +122,10 @@ namespace TP_EJERCICIO_11
             // 
             // Descripcion
             // 
+            this.Descripcion.FillWeight = 150F;
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 150;
             // 
             // Costo
             // 
@@ -132,8 +134,10 @@ namespace TP_EJERCICIO_11
             // 
             // Peso
             // 
+            this.Peso.FillWeight = 50F;
             this.Peso.HeaderText = "Peso";
             this.Peso.Name = "Peso";
+            this.Peso.Width = 50;
             // 
             // LugarSalida
             // 
@@ -157,8 +161,10 @@ namespace TP_EJERCICIO_11
             // 
             // Estado
             // 
+            this.Estado.FillWeight = 200F;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
+            this.Estado.Width = 200;
             // 
             // Form_Clientes
             // 

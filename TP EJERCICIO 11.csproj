@@ -73,6 +73,12 @@
     <Compile Include="Formularios\Form_IniciarSesion.Designer.cs">
       <DependentUpon>Form_IniciarSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Form_Moviles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Moviles.Designer.cs">
+      <DependentUpon>Form_Moviles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Form_Operadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form_IniciarSesion.resx">
       <DependentUpon>Form_IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_Moviles.resx">
+      <DependentUpon>Form_Moviles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form_Operadores.resx">
       <DependentUpon>Form_Operadores.cs</DependentUpon>

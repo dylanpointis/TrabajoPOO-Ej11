@@ -37,14 +37,14 @@ namespace TP_EJERCICIO_11.Formularios
 
         private void btnRegistrarPedido_Click(object sender, EventArgs e)
         {
-            if (txtIDPedido.Text != "" && txtCliente.Text != "" && txtDescripcion.Text != "" && txtCosto.Text != "" && txtPeso.Text != "" && txtSalida.Text != "" && txtDestino.Text != "" && txtMovil.Text != "")
+            if (txtIDPedido.Text != "" && txtCliente.Text != "" && txtDescripcion.Text != "" && txtCosto.Text != "" && txtPeso.Text != "" && txtSalida.Text != "" && txtDestino.Text != "")
             {
                 FileStream Archivo = new FileStream("Envios.csv", FileMode.Append, FileAccess.Write);
                 StreamWriter Escritor = new StreamWriter(Archivo);
                 string linea;
                 DateTime fechaDeEntrega = DateTime.Now.AddDays(3);// LA FECHA DE ENTREGA ES 72 HORAS DESPUES DE REGISTRAR EL PEDIDO
 
-                linea = nombreDeUsuario + ';' + txtIDPedido.Text +';' + txtCliente.Text + ';' + txtDescripcion.Text + ';' + txtCosto.Text + ';' + txtPeso.Text + ';' + txtSalida.Text + ';' + txtDestino.Text + ';' + txtMovil.Text + ';' + fechaDeEntrega.ToString("dd/MM/yyyy") + ';' + "En preparación";
+                linea = txtIDPedido.Text + ';' + nombreDeUsuario + ';' + txtCliente.Text + ';' + txtDescripcion.Text + ';' + txtCosto.Text + ';' + txtPeso.Text + ';' + txtSalida.Text + ';' + txtDestino.Text + ';' + "Sin asignar" + ';' + fechaDeEntrega.ToString("dd/MM/yyyy") + ';' + "Esperando aceptación del operador";
                 Escritor.WriteLine(linea);
                 Escritor.Close();
                 Archivo.Close();
@@ -68,9 +68,9 @@ namespace TP_EJERCICIO_11.Formularios
             while (linea != null)
             {
                 datos = linea.Split(';');
-                if (nombreDeUsuario == datos[0])
+                if (nombreDeUsuario == datos[1])
                 {
-                    grillaEnvios.Rows.Add(datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7] , datos[8], datos[9], datos[10]);
+                    grillaEnvios.Rows.Add(datos[0], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7] , datos[8], datos[9], datos[10]);
                 }
                 linea = LectorEnvios.ReadLine();
             }
@@ -78,7 +78,7 @@ namespace TP_EJERCICIO_11.Formularios
             ArchivoEnvios.Close();
 
 
-
+            
             grillaMoviles.Rows.Clear();
             FileStream ArchivoMoviles = new FileStream("Moviles.csv", FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader LectorMoviles = new StreamReader(ArchivoMoviles);
@@ -88,7 +88,6 @@ namespace TP_EJERCICIO_11.Formularios
             {
                 datos = linea.Split(';');
                 grillaMoviles.Rows.Add(datos[0], datos[1]);
-                txtMovil.Items.Add(datos[0]);
                 linea = LectorMoviles.ReadLine();
             }
             LectorMoviles.Close();
@@ -114,40 +113,6 @@ namespace TP_EJERCICIO_11.Formularios
             }
             LectorClientes.Close();
             ArchivoClientes.Close();
-        }
-
-        private void btnRegistrarMovil_Click(object sender, EventArgs e)
-        {
-            if (txtNombreMovil.Text != "" && txtNumeroMovil.Text != "")
-            {
-                FileStream Archivo = new FileStream("Moviles.csv", FileMode.Append, FileAccess.Write);
-                StreamWriter Escritor = new StreamWriter(Archivo);
-                string linea;
-               
-
-                linea = txtNombreMovil.Text + ';' + txtNumeroMovil.Text;
-                Escritor.WriteLine(linea);
-                Escritor.Close();
-                Archivo.Close();
-                ActualizarGrilla();
-            }
-            else
-            {
-                MessageBox.Show("Debe llenar todos los campos");
-            }
-        }
-
-        private void btnEliminarMovil_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int IndiceSeleccionado = grillaMoviles.SelectedCells[0].RowIndex; //conseguimos el indice de la celda seleccionada
-                DataGridViewRow FilaSeleccionada = grillaMoviles.Rows[IndiceSeleccionado];
-                string NombreMovil = FilaSeleccionada.Cells[0].Value.ToString();
-
-                // NO SE COMO ELIMINAR SEGUN EL NOMBRE
-            }
-            catch(Exception ex) { MessageBox.Show("Seleccione el Movil a eliminar");}
         }
     }
 }

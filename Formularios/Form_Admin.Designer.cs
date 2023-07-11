@@ -43,13 +43,14 @@ namespace TP_EJERCICIO_11
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(492, 136);
+            this.label1.Location = new System.Drawing.Point(476, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 20);
             this.label1.TabIndex = 1;
@@ -60,7 +61,7 @@ namespace TP_EJERCICIO_11
             this.btnCrearCuenta.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCrearCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearCuenta.ForeColor = System.Drawing.Color.White;
-            this.btnCrearCuenta.Location = new System.Drawing.Point(496, 480);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(480, 462);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(185, 23);
             this.btnCrearCuenta.TabIndex = 2;
@@ -77,7 +78,7 @@ namespace TP_EJERCICIO_11
             "Cliente",
             "Proveedor",
             "Operador"});
-            this.cmbRol.Location = new System.Drawing.Point(518, 215);
+            this.cmbRol.Location = new System.Drawing.Point(502, 197);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(121, 21);
             this.cmbRol.TabIndex = 3;
@@ -85,14 +86,14 @@ namespace TP_EJERCICIO_11
             // 
             // txtNombreDeUsuario
             // 
-            this.txtNombreDeUsuario.Location = new System.Drawing.Point(518, 259);
+            this.txtNombreDeUsuario.Location = new System.Drawing.Point(502, 241);
             this.txtNombreDeUsuario.Name = "txtNombreDeUsuario";
             this.txtNombreDeUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtNombreDeUsuario.TabIndex = 4;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(518, 302);
+            this.txtClave.Location = new System.Drawing.Point(502, 284);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(121, 20);
             this.txtClave.TabIndex = 5;
@@ -100,7 +101,7 @@ namespace TP_EJERCICIO_11
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(515, 197);
+            this.label2.Location = new System.Drawing.Point(499, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 13);
             this.label2.TabIndex = 6;
@@ -109,7 +110,7 @@ namespace TP_EJERCICIO_11
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(515, 241);
+            this.label3.Location = new System.Drawing.Point(499, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 7;
@@ -118,7 +119,7 @@ namespace TP_EJERCICIO_11
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(515, 284);
+            this.label4.Location = new System.Drawing.Point(499, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 8;
@@ -127,7 +128,7 @@ namespace TP_EJERCICIO_11
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(515, 413);
+            this.label5.Location = new System.Drawing.Point(499, 395);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 10;
@@ -135,7 +136,7 @@ namespace TP_EJERCICIO_11
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(518, 431);
+            this.txtMail.Location = new System.Drawing.Point(502, 413);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(121, 20);
             this.txtMail.TabIndex = 9;
@@ -143,7 +144,7 @@ namespace TP_EJERCICIO_11
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(515, 327);
+            this.label6.Location = new System.Drawing.Point(499, 309);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 12;
@@ -151,7 +152,7 @@ namespace TP_EJERCICIO_11
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(518, 345);
+            this.txtNombre.Location = new System.Drawing.Point(502, 327);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 11;
@@ -159,7 +160,7 @@ namespace TP_EJERCICIO_11
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(515, 370);
+            this.label7.Location = new System.Drawing.Point(499, 352);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 14;
@@ -167,10 +168,20 @@ namespace TP_EJERCICIO_11
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(518, 390);
+            this.txtApellido.Location = new System.Drawing.Point(502, 372);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(121, 20);
             this.txtApellido.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(497, 122);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 20);
+            this.label9.TabIndex = 115;
+            this.label9.Text = "Crear usuarios";
             // 
             // Form_Admin
             // 
@@ -178,6 +189,7 @@ namespace TP_EJERCICIO_11
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 833);
             this.ControlBox = false;
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -214,5 +226,6 @@ namespace TP_EJERCICIO_11
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Label label9;
     }
 }

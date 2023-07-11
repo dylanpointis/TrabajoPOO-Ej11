@@ -43,13 +43,12 @@ namespace TP_EJERCICIO_11
             lblBienvenido.Text = $"Bienvenido {Rol.ToUpper()}: {Nombre} {Apellido}";
             if (Rol == "Operador")
             {
-                Form_Operadores formulario = new Form_Operadores();
-                formulario.MdiParent = this;
-                formulario.Show();
+
             }
             if (Rol == "Admin")
             {
-                btnCuentas.Visible = true;
+                btnMoviles.Visible = true;
+                btnCuentas.Visible = true;   
             }
         }
 
@@ -80,6 +79,12 @@ namespace TP_EJERCICIO_11
                 Form_Clientes formulario = new Form_Clientes(unCliente);
                 MostrarFormulario(formulario);
             }
+            if(Rol == "Operador")
+            {
+                Form_Operadores formulario = new Form_Operadores();
+                formulario.MdiParent = this;
+                MostrarFormulario(formulario);
+            }
         }
 
         private void btnCuentas_Click_1(object sender, EventArgs e)
@@ -96,9 +101,17 @@ namespace TP_EJERCICIO_11
             MostrarFormulario(formulario);
         }
 
+        private void btnMoviles_Click(object sender, EventArgs e)
+        {
+            Form_Moviles formulario = new Form_Moviles();
+            formulario.MdiParent = this;
+            MostrarFormulario(formulario);
+        }
+
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }

@@ -21,8 +21,10 @@ namespace TP_EJERCICIO_11
         }
         private void Form_IniciarSesion_Load(object sender, EventArgs e)
         {
-            txtNombreDeUsuario.Text = "EstebanRodriguez";
-            txtClave.Text = "1";
+            //txtNombreDeUsuario.Text = "EstebanRodriguez";
+            //txtClave.Text = "1";
+            txtNombreDeUsuario.Text = "3";
+            txtClave.Text = "3";
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
