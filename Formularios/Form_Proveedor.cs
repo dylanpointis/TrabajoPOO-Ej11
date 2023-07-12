@@ -78,22 +78,6 @@ namespace TP_EJERCICIO_11.Formularios
             ArchivoEnvios.Close();
 
 
-            
-            grillaMoviles.Rows.Clear();
-            FileStream ArchivoMoviles = new FileStream("Moviles.csv", FileMode.OpenOrCreate, FileAccess.Read);
-            StreamReader LectorMoviles = new StreamReader(ArchivoMoviles);
-            linea = LectorMoviles.ReadLine();
-
-            while (linea != null)
-            {
-                datos = linea.Split(';');
-                grillaMoviles.Rows.Add(datos[0], datos[1]);
-                linea = LectorMoviles.ReadLine();
-            }
-            LectorMoviles.Close();
-            ArchivoMoviles.Close();
-
-
 
             grillaClientes.Rows.Clear();
             FileStream ArchivoClientes = new FileStream("Usuarios.csv", FileMode.OpenOrCreate, FileAccess.Read);

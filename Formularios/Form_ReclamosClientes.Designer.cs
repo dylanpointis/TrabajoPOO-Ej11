@@ -31,11 +31,6 @@ namespace TP_EJERCICIO_11.Formularios
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grillaReclamos = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDPedido = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +39,11 @@ namespace TP_EJERCICIO_11.Formularios
             this.label4 = new System.Windows.Forms.Label();
             this.btnRealizarReclamo = new System.Windows.Forms.Button();
             this.btnEliminarMovil = new System.Windows.Forms.Button();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaReclamos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDPedido)).BeginInit();
             this.SuspendLayout();
@@ -54,9 +54,9 @@ namespace TP_EJERCICIO_11.Formularios
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(475, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 20);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "RECLAMOS DE";
+            this.label1.Text = "RECLAMOS";
             // 
             // grillaReclamos
             // 
@@ -69,33 +69,8 @@ namespace TP_EJERCICIO_11.Formularios
             this.Column5});
             this.grillaReclamos.Location = new System.Drawing.Point(291, 84);
             this.grillaReclamos.Name = "grillaReclamos";
-            this.grillaReclamos.Size = new System.Drawing.Size(543, 308);
+            this.grillaReclamos.Size = new System.Drawing.Size(743, 308);
             this.grillaReclamos.TabIndex = 1;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ID_Pedido";
-            this.Column4.Name = "Column4";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombre de usuario Cliente";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre Proveedor";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Descripción";
-            this.Column3.Name = "Column3";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Fecha Reclamo";
-            this.Column5.Name = "Column5";
             // 
             // label2
             // 
@@ -174,6 +149,34 @@ namespace TP_EJERCICIO_11.Formularios
             this.btnEliminarMovil.TabIndex = 116;
             this.btnEliminarMovil.Text = "Eliminar Reclamo";
             this.btnEliminarMovil.UseVisualStyleBackColor = false;
+            this.btnEliminarMovil.Click += new System.EventHandler(this.btnEliminarMovil_Click);
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "ID_Pedido";
+            this.Column4.Name = "Column4";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre de usuario Cliente";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre Proveedor";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 300F;
+            this.Column3.HeaderText = "Descripción";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 300;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Fecha Reclamo";
+            this.Column5.Name = "Column5";
             // 
             // Form_ReclamosClientes
             // 
@@ -211,11 +214,11 @@ namespace TP_EJERCICIO_11.Formularios
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRealizarReclamo;
+        private System.Windows.Forms.Button btnEliminarMovil;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button btnEliminarMovil;
     }
 }

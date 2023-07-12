@@ -159,14 +159,13 @@ namespace TP_EJERCICIO_11
                         datos = linea.Split(';');
                         if (idPedido == datos[0]) //Edita Si encuentra el ID
                         {
-                            //Editar archivo csv: Asignar un Movil y editar estado a "En preparacion"
+                            //Edita el estado del archivo CSV
                             lineaEscritura = datos[0] + ';' + datos[1] + ';' + datos[2] + ';' + datos[3] + ';' + datos[4] + ';' +
                                 datos[5] + ';' + datos[6] + ';' + datos[7] + ';' + datos[8] + ';' + datos[9] + ';' + txtEstado.Text;
                             EscritorTemp.WriteLine(lineaEscritura);
                         }
                         else //Si no lo encuentra no edita nada.
-                        {
-                            lineaEscritura = datos[0] + ';' + datos[1] + ';' + datos[2] + ';' + datos[3] + ';' + datos[4] + ';' + datos[5] + ';' + datos[6] + ';' + datos[7] + ';' + datos[8] + ';' + datos[9] + ';' + datos[10];
+                        { 
                             EscritorTemp.WriteLine(lineaEscritura);
                         }
                         linea = LectorEnvios.ReadLine();
@@ -184,7 +183,7 @@ namespace TP_EJERCICIO_11
                 else { MessageBox.Show("Seleccione el estado"); }
                 
             }
-            catch (Exception) { MessageBox.Show("Seleccione el Envío a aceptar"); }
+            catch (Exception) { MessageBox.Show("Seleccione el Envío a editar"); }
         }
         }
 }

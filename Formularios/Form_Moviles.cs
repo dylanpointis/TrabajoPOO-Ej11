@@ -18,6 +18,11 @@ namespace TP_EJERCICIO_11.Formularios
             InitializeComponent();
         }
 
+        private void Form_Moviles_Load(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
+
         private void btnRegistrarMovil_Click(object sender, EventArgs e)
         {
             if (txtNombreMovil.Text != "" && txtNumeroMovil.Text != "")
@@ -47,15 +52,37 @@ namespace TP_EJERCICIO_11.Formularios
                 DataGridViewRow FilaSeleccionada = grillaMoviles.Rows[IndiceSeleccionado];
                 string NombreMovil = FilaSeleccionada.Cells[0].Value.ToString();
 
-                //seguir
+                FileStream ArchivoMoviles = new FileStream("Moviles.csv", FileMode.OpenOrCreate, FileAccess.Read);
+                StreamReader LectorMoviles = new StreamReader(ArchivoMoviles);
+                FileStream ArchivoTemp = new FileStream("temp.csv", FileMode.Create, FileAccess.Write);
+                StreamWriter EscritorTemp = new StreamWriter(ArchivoTemp);
+
+                string linea = LectorMoviles.ReadLine();
+                string[] datos;
+
+                while (linea != null)
+                {
+                    datos = linea.Split(';');
+                    if (NombreMovil != datos[0]) //SI EL NOMBRE DEL SELECCIONADO ES DISTINTO AL NOMBRE DEL CSV
+                    {
+                        //Escribe en el Temporal todos los que "Estan bien", o sea los que no quiero eliminar
+                        EscritorTemp.WriteLine(linea);
+                    }
+                    linea = LectorMoviles.ReadLine();
+                }
+                LectorMoviles.Close();
+                ArchivoMoviles.Close();
+                EscritorTemp.Close();
+                ArchivoTemp.Close();
+                File.Replace("temp.csv", "Moviles.csv", "temp.csv.bak");
+                File.Delete("temp.csv");
+                File.Delete("temp.csv.bak");
+
+                ActualizarGrilla();
             }
             catch (Exception ex) { MessageBox.Show("Seleccione el Móvil a eliminar"); }
         }
 
-        private void Form_Moviles_Load(object sender, EventArgs e)
-        {
-            ActualizarGrilla();
-        }
 
         private void ActualizarGrilla()
         {
@@ -77,7 +104,52 @@ namespace TP_EJERCICIO_11.Formularios
 
         private void btnEditarMovil_Click(object sender, EventArgs e)
         {
-            //fijarse como hice "editar estado" en form_operadores
+            try
+            {
+                int IndiceSeleccionado = grillaMoviles.SelectedCells[0].RowIndex; 
+                DataGridViewRow FilaSeleccionada = grillaMoviles.Rows[IndiceSeleccionado];
+                string NombreMovil = FilaSeleccionada.Cells[0].Value.ToString();
+                if (txtNombreMovil.Text != "" && txtNumeroMovil.Text != "")
+                {
+                    FileStream ArchivoMoviles = new FileStream("Moviles.csv", FileMode.OpenOrCreate, FileAccess.Read);
+                    StreamReader LectorMoviles = new StreamReader(ArchivoMoviles);
+                    FileStream ArchivoTemp = new FileStream("temp.csv", FileMode.Create, FileAccess.Write);
+                    StreamWriter EscritorTemp = new StreamWriter(ArchivoTemp);
+
+                    string linea = LectorMoviles.ReadLine();
+                    string[] datos;
+                    string lineaEscritura = "";
+
+                    while (linea != null)
+                    {
+                        datos = linea.Split(';');
+                        if (NombreMovil == datos[0]) 
+                        {
+                            
+                            lineaEscritura = txtNombreMovil.Text + ';' + txtNumeroMovil.Text;
+                            EscritorTemp.WriteLine(lineaEscritura);
+                        }
+                        else 
+                        {
+                            lineaEscritura = datos[0] + ';' + datos[1];
+                            EscritorTemp.WriteLine(lineaEscritura);
+                        }
+                        linea = LectorMoviles.ReadLine();
+                    }
+                    LectorMoviles.Close();
+                    ArchivoMoviles.Close();
+                    EscritorTemp.Close();
+                    ArchivoTemp.Close();
+                    File.Replace("temp.csv", "Moviles.csv", "temp.csv.bak");
+                    File.Delete("temp.csv");
+                    File.Delete("temp.csv.bak");
+
+                    ActualizarGrilla();
+                }
+                else { MessageBox.Show("Ingrese el nombre del móvil y el número del telefono"); }
+
+            }
+            catch (Exception) { MessageBox.Show("Seleccione el movil a editar"); } 
         }
     }
 }

@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Formularios\Form_Demoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Demoras.Designer.cs">
+      <DependentUpon>Form_Demoras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Form_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Proveedor.cs" />
+    <EmbeddedResource Include="Formularios\Form_Demoras.resx">
+      <DependentUpon>Form_Demoras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
     </EmbeddedResource>

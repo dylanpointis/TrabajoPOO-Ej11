@@ -33,7 +33,6 @@ namespace TP_EJERCICIO_11
             this.label2 = new System.Windows.Forms.Label();
             this.labelEnvios = new System.Windows.Forms.Label();
             this.grillaEnvios = new System.Windows.Forms.DataGridView();
-            this.btnBajaPedido = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@ namespace TP_EJERCICIO_11
             this.Movil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBajaPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaEnvios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,18 +95,6 @@ namespace TP_EJERCICIO_11
             this.grillaEnvios.Name = "grillaEnvios";
             this.grillaEnvios.Size = new System.Drawing.Size(1119, 375);
             this.grillaEnvios.TabIndex = 85;
-            // 
-            // btnBajaPedido
-            // 
-            this.btnBajaPedido.BackColor = System.Drawing.Color.Firebrick;
-            this.btnBajaPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBajaPedido.ForeColor = System.Drawing.Color.White;
-            this.btnBajaPedido.Location = new System.Drawing.Point(68, 598);
-            this.btnBajaPedido.Name = "btnBajaPedido";
-            this.btnBajaPedido.Size = new System.Drawing.Size(121, 26);
-            this.btnBajaPedido.TabIndex = 98;
-            this.btnBajaPedido.Text = "Dar de baja pedido";
-            this.btnBajaPedido.UseVisualStyleBackColor = false;
             // 
             // Column1
             // 
@@ -165,6 +153,19 @@ namespace TP_EJERCICIO_11
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.Width = 200;
+            // 
+            // btnBajaPedido
+            // 
+            this.btnBajaPedido.BackColor = System.Drawing.Color.Firebrick;
+            this.btnBajaPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBajaPedido.ForeColor = System.Drawing.Color.White;
+            this.btnBajaPedido.Location = new System.Drawing.Point(68, 598);
+            this.btnBajaPedido.Name = "btnBajaPedido";
+            this.btnBajaPedido.Size = new System.Drawing.Size(121, 26);
+            this.btnBajaPedido.TabIndex = 98;
+            this.btnBajaPedido.Text = "Dar de baja pedido";
+            this.btnBajaPedido.UseVisualStyleBackColor = false;
+            this.btnBajaPedido.Click += new System.EventHandler(this.btnBajaPedido_Click);
             // 
             // Form_Clientes
             // 

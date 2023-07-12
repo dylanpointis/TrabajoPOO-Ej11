@@ -32,8 +32,50 @@ namespace TP_EJERCICIO_11
         {
             label1.Text = "Bienvenido " + Nombre + " " + Apellido;
             labelEnvios.Text = "Grilla de pedidos de: " + Nombre + " " + Apellido;
+            ActualizarGrilla();
+        }
 
+        private void btnBajaPedido_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int IndiceSeleccionado = grillaEnvios.SelectedCells[0].RowIndex; //conseguimos el indice de la celda seleccionada
+                DataGridViewRow FilaSeleccionada = grillaEnvios.Rows[IndiceSeleccionado];
+                string idPedido = FilaSeleccionada.Cells[0].Value.ToString();
 
+                FileStream Archivo = new FileStream("Envios.csv", FileMode.OpenOrCreate, FileAccess.Read);
+                StreamReader Lector = new StreamReader(Archivo);
+                FileStream ArchivoTemp = new FileStream("temp.csv", FileMode.Create, FileAccess.Write);
+                StreamWriter EscritorTemp = new StreamWriter(ArchivoTemp);
+
+                string linea = Lector.ReadLine();
+                string[] datos;
+
+                while (linea != null)
+                {
+                    datos = linea.Split(';');
+                    if (idPedido != datos[0]) //SI EL Id del Pedido SELECCIONADO ES DISTINTO AL NOMBRE DEL CSV
+                    {
+                        //Escribe en el Temporal todos los que "Estan bien", o sea los que no quiero eliminar
+                        EscritorTemp.WriteLine(linea);
+                    }
+                    linea = Lector.ReadLine();
+                }
+                Lector.Close();
+                Archivo.Close();
+                EscritorTemp.Close();
+                ArchivoTemp.Close();
+                File.Replace("temp.csv", "Envios.csv", "temp.csv.bak");
+                File.Delete("temp.csv");
+                File.Delete("temp.csv.bak");
+
+                ActualizarGrilla();
+            }
+            catch (Exception ex) { MessageBox.Show("Seleccione el pedido a dar de baja"); }
+        }
+
+        private void ActualizarGrilla()
+        {
             grillaEnvios.Rows.Clear();
             FileStream ArchivoEnvios = new FileStream("Envios.csv", FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader LectorEnvios = new StreamReader(ArchivoEnvios);

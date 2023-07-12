@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label13 = new System.Windows.Forms.Label();
-            this.grillaMoviles = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPeso = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCosto = new System.Windows.Forms.NumericUpDown();
@@ -65,46 +61,13 @@
             this.txtIDPedido = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.grillaMoviles)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtPeso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaEnvios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDPedido)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(208, 453);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 20);
-            this.label13.TabIndex = 94;
-            this.label13.Text = "Grilla Móviles";
-            // 
-            // grillaMoviles
-            // 
-            this.grillaMoviles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaMoviles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.grillaMoviles.Location = new System.Drawing.Point(211, 482);
-            this.grillaMoviles.Name = "grillaMoviles";
-            this.grillaMoviles.Size = new System.Drawing.Size(288, 278);
-            this.grillaMoviles.TabIndex = 93;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.FillWeight = 150F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Número de telefono";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // txtPeso
             // 
@@ -178,7 +141,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(659, 453);
+            this.label7.Location = new System.Drawing.Point(207, 464);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 20);
             this.label7.TabIndex = 83;
@@ -201,7 +164,7 @@
             this.Nombre,
             this.Column1,
             this.Mail});
-            this.grillaClientes.Location = new System.Drawing.Point(663, 482);
+            this.grillaClientes.Location = new System.Drawing.Point(211, 493);
             this.grillaClientes.Name = "grillaClientes";
             this.grillaClientes.Size = new System.Drawing.Size(490, 278);
             this.grillaClientes.TabIndex = 74;
@@ -380,17 +343,28 @@
             this.txtCliente.Size = new System.Drawing.Size(121, 21);
             this.txtCliente.TabIndex = 108;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(976, 493);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(308, 65);
+            this.label6.TabIndex = 125;
+            this.label6.Text = "Nota: \r\nPor defecto el estado del envío es \"Esperando  aceptación del \r\noperador\"" +
+    " hasta que el operador lo acepte.\r\nAdemas, el operador debe asignarle un móvil p" +
+    "ara realizar la \r\nentrega.\r\n";
+            // 
             // Form_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 772);
             this.ControlBox = false;
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtIDPedido);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.grillaMoviles);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtCosto);
@@ -410,7 +384,6 @@
             this.Name = "Form_Proveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form_Proveedor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grillaMoviles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPeso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).EndInit();
@@ -422,8 +395,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView grillaMoviles;
         private System.Windows.Forms.NumericUpDown txtPeso;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown txtCosto;
@@ -440,8 +411,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Button btnRegistrarPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -459,5 +428,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Movil;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaEntrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Label label6;
     }
 }

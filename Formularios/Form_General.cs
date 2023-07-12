@@ -113,5 +113,11 @@ namespace TP_EJERCICIO_11
             this.Close();
         }
 
+        private void btnDemoras_Click(object sender, EventArgs e)
+        {
+            Usuario unUsuario = new Usuario(nombreUsuario, "", Nombre, Apellido, Mail, Rol);
+            Form_Demoras formulario = new Form_Demoras(unUsuario);
+            MostrarFormulario(formulario);
+        }
     }
 }

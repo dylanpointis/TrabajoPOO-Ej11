@@ -38,6 +38,7 @@
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnReclamos = new System.Windows.Forms.Button();
             this.btnEnvios = new System.Windows.Forms.Button();
+            this.btnDemoras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +79,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnDemoras);
             this.panel2.Controls.Add(this.btnMoviles);
             this.panel2.Controls.Add(this.btnCuentas);
             this.panel2.Controls.Add(this.btnCerrarSesion);
@@ -96,6 +98,7 @@
             this.btnMoviles.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMoviles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoviles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoviles.Image = ((System.Drawing.Image)(resources.GetObject("btnMoviles.Image")));
             this.btnMoviles.Location = new System.Drawing.Point(555, 0);
             this.btnMoviles.Name = "btnMoviles";
             this.btnMoviles.Size = new System.Drawing.Size(185, 98);
@@ -170,6 +173,22 @@
             this.btnEnvios.UseVisualStyleBackColor = true;
             this.btnEnvios.Click += new System.EventHandler(this.btnEnvios_Click);
             // 
+            // btnDemoras
+            // 
+            this.btnDemoras.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDemoras.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDemoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemoras.Image = ((System.Drawing.Image)(resources.GetObject("btnDemoras.Image")));
+            this.btnDemoras.Location = new System.Drawing.Point(740, 0);
+            this.btnDemoras.Name = "btnDemoras";
+            this.btnDemoras.Size = new System.Drawing.Size(185, 98);
+            this.btnDemoras.TabIndex = 6;
+            this.btnDemoras.Text = "Demoras";
+            this.btnDemoras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDemoras.UseVisualStyleBackColor = true;
+            this.btnDemoras.Click += new System.EventHandler(this.btnDemoras_Click);
+            // 
             // Form_General
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,5 +220,6 @@
         private System.Windows.Forms.Button btnEnvios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMoviles;
+        private System.Windows.Forms.Button btnDemoras;
     }
 }
