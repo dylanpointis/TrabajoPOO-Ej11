@@ -28,7 +28,7 @@ namespace TP_EJERCICIO_11.Formularios
             if(Rol == "Cliente") { label1.Text = "RECLAMOS DEL CLIENTE " + nombreDeUsuario; }
             if (Rol == "Proveedor") { label1.Text = "RECLAMOS AL PROVEEDOR " + nombreDeUsuario; }
 
-            if (Rol == "Proveedor" || Rol == "Operador")
+            if (Rol == "Proveedor" || Rol == "Operador") //oculta los botones para que solo los clientes puedan hacer reclamos
             {
                 btnRealizarReclamo.Visible = false; txtIDPedido.Visible = false; txtDescripcion.Visible = false; txtProveedor.Visible = false; label2.Visible = false; label3.Visible = false;  label4.Visible = false; btnEliminarMovil.Visible = false;
             }

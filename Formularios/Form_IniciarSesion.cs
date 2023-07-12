@@ -98,7 +98,7 @@ namespace TP_EJERCICIO_11
 
         private void btnmostrarcuentas_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("EstebanRodriguez;1;Cliente\n1;1;Admin \n2;2;Proveedor\n3;3;Operador");
+            MessageBox.Show("NombreDeUsuario;Clave;Rol\n\nEstebanRodriguez;1;Cliente\n1;1;Admin \nFravega;2;Proveedor\n3;3;Operador");
         }
     }
 }
