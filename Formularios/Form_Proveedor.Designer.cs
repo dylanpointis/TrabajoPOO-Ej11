@@ -43,16 +43,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grillaEnvios = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LugarSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LugarDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Movil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSalida = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,6 +52,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Movil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LugarDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LugarSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtPeso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCosto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).BeginInit();
@@ -210,64 +210,6 @@
             this.grillaEnvios.Size = new System.Drawing.Size(1068, 400);
             this.grillaEnvios.TabIndex = 73;
             // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 75F;
-            this.Column3.HeaderText = "ID_Pedido";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 75;
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "Nombre de usuario Cliente";
-            this.NombreCliente.Name = "NombreCliente";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.FillWeight = 150F;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 150;
-            // 
-            // Costo
-            // 
-            this.Costo.HeaderText = "Costo";
-            this.Costo.Name = "Costo";
-            // 
-            // Peso
-            // 
-            this.Peso.FillWeight = 50F;
-            this.Peso.HeaderText = "Peso";
-            this.Peso.Name = "Peso";
-            this.Peso.Width = 50;
-            // 
-            // LugarSalida
-            // 
-            this.LugarSalida.HeaderText = "Lugar Salida";
-            this.LugarSalida.Name = "LugarSalida";
-            // 
-            // LugarDestino
-            // 
-            this.LugarDestino.HeaderText = "Lugar Destino";
-            this.LugarDestino.Name = "LugarDestino";
-            // 
-            // Movil
-            // 
-            this.Movil.HeaderText = "Movil";
-            this.Movil.Name = "Movil";
-            // 
-            // FechaEntrega
-            // 
-            this.FechaEntrega.HeaderText = "Fecha Entrega";
-            this.FechaEntrega.Name = "FechaEntrega";
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 150F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.Width = 150;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -355,6 +297,64 @@
     " hasta que el operador lo acepte.\r\nAdemas, el operador debe asignarle un móvil p" +
     "ara realizar la \r\nentrega.\r\n";
             // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 150F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.Width = 150;
+            // 
+            // FechaEntrega
+            // 
+            this.FechaEntrega.HeaderText = "Fecha Entrega";
+            this.FechaEntrega.Name = "FechaEntrega";
+            // 
+            // Movil
+            // 
+            this.Movil.HeaderText = "Movil";
+            this.Movil.Name = "Movil";
+            // 
+            // LugarDestino
+            // 
+            this.LugarDestino.HeaderText = "Lugar Destino";
+            this.LugarDestino.Name = "LugarDestino";
+            // 
+            // LugarSalida
+            // 
+            this.LugarSalida.HeaderText = "Lugar Salida";
+            this.LugarSalida.Name = "LugarSalida";
+            // 
+            // Peso
+            // 
+            this.Peso.FillWeight = 50F;
+            this.Peso.HeaderText = "Peso";
+            this.Peso.Name = "Peso";
+            this.Peso.Width = 50;
+            // 
+            // Costo
+            // 
+            this.Costo.HeaderText = "Costo";
+            this.Costo.Name = "Costo";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.FillWeight = 150F;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 150;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "Nombre de usuario Cliente";
+            this.NombreCliente.Name = "NombreCliente";
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 75F;
+            this.Column3.HeaderText = "ID_Pedido";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 75;
+            // 
             // Form_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,6 +418,7 @@
         private System.Windows.Forms.NumericUpDown txtIDPedido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox txtCliente;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
@@ -428,6 +429,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Movil;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaEntrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.Label label6;
     }
 }

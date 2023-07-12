@@ -109,6 +109,12 @@
     <Compile Include="Formularios\Form_ReclamosClientes.Designer.cs">
       <DependentUpon>Form_ReclamosClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Form_VerEnviosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_VerEnviosAdmin.Designer.cs">
+      <DependentUpon>Form_VerEnviosAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Proveedor.cs" />
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form_ReclamosClientes.resx">
       <DependentUpon>Form_ReclamosClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_VerEnviosAdmin.resx">
+      <DependentUpon>Form_VerEnviosAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

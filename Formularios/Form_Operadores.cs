@@ -14,6 +14,7 @@ namespace TP_EJERCICIO_11
 {
     public partial class Form_Operadores : Form
     {
+
         public Form_Operadores()
         {
             InitializeComponent();

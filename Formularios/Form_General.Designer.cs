@@ -33,12 +33,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDemoras = new System.Windows.Forms.Button();
             this.btnMoviles = new System.Windows.Forms.Button();
             this.btnCuentas = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnReclamos = new System.Windows.Forms.Button();
             this.btnEnvios = new System.Windows.Forms.Button();
-            this.btnDemoras = new System.Windows.Forms.Button();
+            this.lblRol = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel1.Controls.Add(this.lblRol);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.Black;
@@ -91,6 +93,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1309, 98);
             this.panel2.TabIndex = 7;
+            // 
+            // btnDemoras
+            // 
+            this.btnDemoras.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDemoras.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDemoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemoras.Image = ((System.Drawing.Image)(resources.GetObject("btnDemoras.Image")));
+            this.btnDemoras.Location = new System.Drawing.Point(740, 0);
+            this.btnDemoras.Name = "btnDemoras";
+            this.btnDemoras.Size = new System.Drawing.Size(185, 98);
+            this.btnDemoras.TabIndex = 6;
+            this.btnDemoras.Text = "Demoras";
+            this.btnDemoras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDemoras.UseVisualStyleBackColor = true;
+            this.btnDemoras.Click += new System.EventHandler(this.btnDemoras_Click);
             // 
             // btnMoviles
             // 
@@ -173,21 +191,16 @@
             this.btnEnvios.UseVisualStyleBackColor = true;
             this.btnEnvios.Click += new System.EventHandler(this.btnEnvios_Click);
             // 
-            // btnDemoras
+            // lblRol
             // 
-            this.btnDemoras.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDemoras.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDemoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDemoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDemoras.Image = ((System.Drawing.Image)(resources.GetObject("btnDemoras.Image")));
-            this.btnDemoras.Location = new System.Drawing.Point(740, 0);
-            this.btnDemoras.Name = "btnDemoras";
-            this.btnDemoras.Size = new System.Drawing.Size(185, 98);
-            this.btnDemoras.TabIndex = 6;
-            this.btnDemoras.Text = "Demoras";
-            this.btnDemoras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDemoras.UseVisualStyleBackColor = true;
-            this.btnDemoras.Click += new System.EventHandler(this.btnDemoras_Click);
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.White;
+            this.lblRol.Location = new System.Drawing.Point(1120, 7);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(50, 20);
+            this.lblRol.TabIndex = 1;
+            this.lblRol.Text = "ROL:";
             // 
             // Form_General
             // 
@@ -221,5 +234,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMoviles;
         private System.Windows.Forms.Button btnDemoras;
+        private System.Windows.Forms.Label lblRol;
     }
 }

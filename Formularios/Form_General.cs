@@ -41,6 +41,7 @@ namespace TP_EJERCICIO_11
         private void Form_General_Load(object sender, EventArgs e)
         {
             lblBienvenido.Text = $"Bienvenido {Rol.ToUpper()}: {Nombre} {Apellido}";
+            lblRol.Text = "ROL: " + Rol;
             if (Rol == "Operador")
             {
 
@@ -82,6 +83,12 @@ namespace TP_EJERCICIO_11
             if(Rol == "Operador")
             {
                 Form_Operadores formulario = new Form_Operadores();
+                formulario.MdiParent = this;
+                MostrarFormulario(formulario);
+            }
+            if(Rol == "Admin")
+            {
+                Form_VerEnviosAdmin formulario = new Form_VerEnviosAdmin();
                 formulario.MdiParent = this;
                 MostrarFormulario(formulario);
             }
