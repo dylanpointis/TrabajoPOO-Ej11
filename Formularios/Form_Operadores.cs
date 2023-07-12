@@ -166,7 +166,7 @@ namespace TP_EJERCICIO_11
                         }
                         else //Si no lo encuentra no edita nada.
                         { 
-                            EscritorTemp.WriteLine(lineaEscritura);
+                            EscritorTemp.WriteLine(datos[0] + ';' + datos[1] + ';' + datos[2] + ';' + datos[3] + ';' + datos[4] + ';' + datos[5] + ';' + datos[6] + ';' + datos[7] + ';' + datos[8] + ';' + datos[9] + ';' + datos[10]);
                         }
                         linea = LectorEnvios.ReadLine();
                     }

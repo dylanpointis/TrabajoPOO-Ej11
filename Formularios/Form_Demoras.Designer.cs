@@ -76,6 +76,7 @@
             this.btnEliminarDemora.TabIndex = 118;
             this.btnEliminarDemora.Text = "Eliminar Demora";
             this.btnEliminarDemora.UseVisualStyleBackColor = false;
+            this.btnEliminarDemora.Click += new System.EventHandler(this.btnEliminarDemora_Click);
             // 
             // btnRegistrarDemora
             // 
@@ -103,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 281);
+            this.label3.Location = new System.Drawing.Point(287, 272);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 13);
             this.label3.TabIndex = 122;
@@ -132,7 +133,7 @@
             // 
             // txtMotivo
             // 
-            this.txtMotivo.Location = new System.Drawing.Point(289, 307);
+            this.txtMotivo.Location = new System.Drawing.Point(289, 298);
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.Size = new System.Drawing.Size(120, 20);
             this.txtMotivo.TabIndex = 124;
